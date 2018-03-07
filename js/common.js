@@ -1,4 +1,5 @@
-var time = new Date("2018-04-06T10:00:00Z").getTime()-new Date().getTime();
+var pointDate = new Date("2018-04-06T10:00:00Z").getTime();//указываем свою дату, которая еще не наступила. Если дата наступила, таймер будет показывать все по нулям
+var time = pointDate-new Date().getTime();
 time = Math.round(time/1000);
 function parseTime_bv(timestamp){
     if (timestamp < 0) timestamp = 0;
@@ -65,7 +66,7 @@ $(document).ready(function(){
         time = time - 1;
         parseTime_bv(time);
         if(time <= 0){
-            console.log('Старт продаж Oktell R2');
+            console.log('Окончание таймера');
         }
     }, 1000);
 });
