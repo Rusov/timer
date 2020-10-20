@@ -1,4 +1,4 @@
-var pointDate = new Date("2018-04-06T10:00:00Z").getTime();//указываем свою дату, которая еще не наступила. Если дата наступила, таймер будет показывать все по нулям
+var pointDate = new Date("2022-04-06T10:00:00Z").getTime();//указываем свою дату, которая еще не наступила. Если дата наступила, таймер будет показывать все по нулям
 var time = pointDate-new Date().getTime();
 time = Math.round(time/1000);
 function parseTime_bv(timestamp){
